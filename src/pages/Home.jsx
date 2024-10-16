@@ -47,8 +47,10 @@ const home = () => {
             <Modal
               title="Book Ground"
               open={isModalOpen}
+              footer={null}
               onOk={handleOk}
               onCancel={handleCancel}
+              destroyOnClose={true}
             >
               <Form />
             </Modal>
