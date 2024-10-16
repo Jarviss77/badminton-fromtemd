@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
+import Home from "./pages/Home";
 import { useEffect, useState } from "react";
 function App() {
   const [mode, setMode] = useState(
@@ -22,7 +23,9 @@ function App() {
           path="/"
           element={
             <div className={`${mode}`}>
-              <div className="dark:bg-black dark:text-white">Hello world</div>
+              <div className="dark:bg-black dark:text-white">
+                <Home />
+              </div>
             </div>
           }
         />
