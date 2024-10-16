@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
+import SignUpPage from "./pages/SignUp";
 import Home from "./pages/Home";
 import { useEffect, useState } from "react";
 
@@ -42,6 +43,16 @@ function App() {
             </div>
           }
         />
+        <Route
+          path={"/signup"}
+            element={
+                <div className={`${mode}`}>
+                <div className="dark:bg-black dark:text-white">
+                    <SignUpPage />
+                </div>
+                </div>
+            }
+          />
       </Routes>
     </div>
   );

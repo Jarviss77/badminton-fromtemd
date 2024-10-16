@@ -33,12 +33,12 @@ const home = () => {
           />
           <div className="w-[30%] mx-2 ">
             <button className="rounded-md bg-slate-200 p-2 px-3 text-sm font-semibold mr-2">
-              Rent & Sell
+              Dummy
             </button>
             <Button iconPosition="start" onClick={showModal} icon={<PlusOutlined />}>
-              Add Customer
+              Book Ground
             </Button>
-              <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+              <Modal title="Book Ground" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
                   <Form />
               </Modal>
           </div>
