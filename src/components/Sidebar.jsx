@@ -2,6 +2,7 @@ import React from "react";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { MdOutlineCalendarToday } from "react-icons/md";
 import { BsPeople } from "react-icons/bs";
+import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
     <div className="bg-zinc-900 text-white h-screen p-5 pt-5">
@@ -9,7 +10,8 @@ const Sidebar = () => {
       <div className="pt-3">
         <div className="flex items-center mb-2">
           <LuLayoutDashboard className="mr-2 " />
-          <div>Dashboard</div>
+          <div><Link to=
+          '/'>Dashboard</Link></div>
         </div>
         <div className="flex items-center mb-2">
           <MdOutlineCalendarToday className="mr-2 " />

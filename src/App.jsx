@@ -2,7 +2,10 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import { useEffect, useState } from "react";
+
+
 function App() {
+
   const [mode, setMode] = useState(
     localStorage.getItem("mode") === "dark" ? "dark" : "light"
   );

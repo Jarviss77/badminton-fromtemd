@@ -1,8 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import Sidebar from "../components/Sidebar";
-import { Button } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
+import { Button, Modal } from 'antd';
+import Form from "../components/Form";
+
 const home = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleOk = () => {
+        setIsModalOpen(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
+
   return (
     <div className="grid grid-cols-12">
       <div className="col-span-2">
@@ -19,9 +35,12 @@ const home = () => {
             <button className="rounded-md bg-slate-200 p-2 px-3 text-sm font-semibold mr-2">
               Rent & Sell
             </button>
-            <Button iconPosition="start" icon={<PlusOutlined />}>
+            <Button iconPosition="start" onClick={showModal} icon={<PlusOutlined />}>
               Add Customer
             </Button>
+              <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+                  <Form />
+              </Modal>
           </div>
         </div>
       </div>
