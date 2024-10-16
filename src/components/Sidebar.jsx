@@ -8,20 +8,13 @@ const Sidebar = () => {
     <div className="bg-zinc-900 text-white h-screen p-5 pt-5">
       <div className="text-2xl font-semibold mb-4">NEXUS</div>
       <div className="pt-3">
-        <div className="flex items-center mb-2">
-          <LuLayoutDashboard className="mr-2 " />
-          <div><Link to=
-          '/'>Dashboard</Link></div>
+        <div className="mb-2 p-2 hover:bg-slate-800 rounded-md px-4">
+          <Link to="/" className=" flex items-center">
+            <MdOutlineCalendarToday className="mr-2 " />
+            <div>Schedule</div>
+          </Link>
         </div>
-        <div className="flex items-center mb-2">
-          <MdOutlineCalendarToday className="mr-2 " />
-          <div>Schedule</div>
-        </div>
-        <div className="flex items-center mb-2">
-          <BsPeople className="mr-2 " />
-          <div>Customer</div>
-        </div>
-        <div className="flex items-center ">
+        <div className="flex items-center mb-2 p-2 hover:bg-slate-800 rounded-md px-4">
           <LuLayoutDashboard className="mr-2 " />
           <div>Attendance</div>
         </div>

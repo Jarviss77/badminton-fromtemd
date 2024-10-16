@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Schedule from "./Schedule";
 import { DatePicker } from "antd";
+import dayjs from "dayjs";
 const Schedule1 = () => {
   const [tab, setTab] = useState(0);
   const tabHandler = (e) => {
@@ -10,10 +11,16 @@ const Schedule1 = () => {
     <div>
       <div className="text-2xl font-bold mb-4 mt-2">Schedule</div>
       <div className="flex mb-4">
-        <DatePicker className="" />
-        <div className="ml-2 text-sm font-semibold bg-zinc-200 dark:bg-zinc-900 p-1 rounded-sm text-center dark:text-white text-black">
+        <DatePicker
+          className="bg-zinc-200"
+          defaultValue={dayjs()}
+          format="DD MMM YYYY"
+          variant="filled"
+          allowClear={false}
+        />
+        <div className="ml-2 text-sm font-semibold bg-zinc-200 dark:bg-zinc-900 p-1 rounded-md text-center dark:text-white text-black">
           <button
-            className={`p-1.5 rounded-sm px-8 mr-1.5 ${
+            className={`p-1.5 rounded-md px-8 mr-1.5 ${
               tab == 0 ? " bg-white" : ""
             }`}
             onClick={tabHandler}
@@ -21,7 +28,7 @@ const Schedule1 = () => {
             Swimming
           </button>
           <button
-            className={`p-1.5 rounded-sm px-8 ${tab == 1 ? "bg-white" : ""}`}
+            className={`p-1.5 rounded-md px-8 ${tab == 1 ? "bg-white" : ""}`}
             onClick={tabHandler}
           >
             Badminton

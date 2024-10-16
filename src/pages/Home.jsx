@@ -26,7 +26,7 @@ const home = () => {
       <div className="col-span-2">
         <Sidebar />
       </div>
-      <div className="col-span-10 p-5 pt-4 pb-2">
+      <div className="col-span-10 p-5 pt-3 pb-2">
         <div className="flex items-center">
           <Input
             type="text"
@@ -53,6 +53,9 @@ const home = () => {
               <Form />
             </Modal>
           </div>
+        </div>
+        <div className="mt-4">
+          <hr />
         </div>
         {/* <BookingCalendar /> */}
         <Schedule1 />
