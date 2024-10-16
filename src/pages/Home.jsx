@@ -22,11 +22,11 @@ const home = () => {
   };
 
   return (
-    <div className="grid grid-cols-12">
-      <div className="col-span-2">
+    <div className="flex">
+      <div className="fixed top-0 left-0 h-full w-1/6 bg-white shadow-md z-10">
         <Sidebar />
       </div>
-      <div className="col-span-10 p-5 pt-3 pb-2">
+      <div className="ml-[16.666667%] p-5 pt-3 pb-2 w-[83.333333%]">
         <div className="flex items-center">
           <Input
             type="text"
